@@ -1,19 +1,176 @@
 from time import sleep
 
-ur_name = input("What shall you be referd to as? (ex. Mrs. Fellow)\n")
-title = "detective"
-print("The murderd victim: Lord Robert Gallowgate")
-print("As you arrive")
-print("1. House tour")
-print("2. Call forensics")
-print("3. I'd rather just go straight to the suspects")
-choise = input("What shall you do?\n")
-if choise == "1":
-    print("Tour")
-if choise == "2":
-    print("call")
-if choise == "3":
-    pass
+
+def blame(numberofchar: int):
+    print()
+
+
+def yard():
+    print("You are standing in front of the Gallowgate Hall. In the summer the manor's lands are beautiful, but with the approaching winter the view is mounrful.")
+    print("The rope that the victim hanged in is swaying in the wind and rain.")
+    while True:
+        print("What would you like to do?")
+
+print ("It is bleak November. Westwind blows harsh and rain beats the moors.")
+sleep(1)
+print()
+print("You are a consultant. A private detective. Known for your discretion, your name is well known in certain circles.")
+sleep(1)
+print()
+playername = input("What is your name? ")
+
+playertitle = ""
+while True:
+    if playertitle != "Mr." or playertitle != "Ms." or playertitle != "Detective":
+        print("What is your title? \n1) Mr. \n2) Ms. \n3) Detective ")
+        plorkok = input("Choose 1, 2 or 3: ")
+        if plorkok == "1":
+            playertitle = "Mr."
+        elif plorkok == "2":
+            playertitle = "Ms."
+        elif plorkok == "3":
+            playertitle = "Detective"
+    
+    if playertitle == "Mr." or playertitle != "Ms." or playertitle != "Detective":
+        break
+
+print(f"You are {playertitle} {playername}. A private detective who enjoys full confidence of the local police department. ")
+print()
+sleep(2)
+print("You get a call from your friend in the police force, Sgt. Thomas.")
+print()
+sleep(2)
+print("The Sergeant tells you that the Lord of the local manor has passed. As he is a man of some importance, they have requested a private detective to take over.")
+print()
+sleep(2)
+print("You arrive in the Gallowgate Hall. The manorhouse is a desolate thing, maple trees surrounding the yard having long lost the rest of autumn's red glow.")
+sleep(2)
+print("One of the trees still carries the rope that Lord Gallowgate hanged in. The body has been removed and taken to the coroner's office.")
+sleep(3)
+print("Did the late Lord Gallowgate indeed hang himself? And if so, why were you called?")
+while True:
+    sleep(3)
+    print("What would you like to do?")
+    print("1) Go inside.")
+    print("2) Study the police report.")
+    firsatyeardchoice = input()
+    if firsatyeardchoice == "2":
+        print("You study the police report.")
+        sleep(2)
+        print("The deceased is Lord Robert Gallowgate. He was discovered by the Butler who was getting firewood. He called the body in 7 o'clock in the morning. The body was hanging from the tree.")
+        print()
+        sleep(3)
+        print(f"Hanging was considered a potential suicide. However,Lord Gallowgate did not have a history of mental ailments. Because of this the house requested the involvement of you, {playertitle} {playername}.")
+        sleep(3)
+        print()
+        print("The only people present last night were the wife of the victim, Lady Anne Gallowgate, the cook Marie Fraser and her husband the butler, Charles Fraser.")
+        sleep(3)
+        print()
+        print("You should interview them and try to figure out what happened.")
+        sleep(4)
+        print("The body has been taken to the coroner's office. You should expect a call soon.")
+    elif firsatyeardchoice == "1":
+        break
+
+sleep(3)
+print("You walk up the stairs and knock on the door.")
+sleep(2)
+print("Knock")
+sleep(2)
+print("Knock")
+sleep(2)
+print("Knock")
+sleep(3)
+# breakpoint()
+while True:
+    print("A man in a clean pressed black suit opens the door.")
+    sleep(2)
+    print(f"'You must be {playertitle} {playername}. We have been expecting you.'")
+    sleep(4)
+    print("This must be the butler, Charles Fraser. He looks distraught.")
+    sleep(1)
+    print("1) My condolences.")
+    print("2) That's me.")
+    print("3) No shit Sherlock.")
+    print("4) You must be mistaken, I am the milkman.")
+    milkmanchoice = input()
+    sleep(2)
+    if milkmanchoice == "1":
+        print("'Thank you.' He says. 'Please come in. There is someone on the phone for you.'")
+        break
+    elif milkmanchoice == "2":
+        print("'Well then detective.' He responds. 'Please follow me. There is someone on the phone for you.'")
+        break
+    elif milkmanchoice == "3":
+        print("He gives you a deadpan stare. 'Come in detective. There is someone on the phone for you.'")
+        break
+    elif milkmanchoice == "4":
+        print("'This is truly no time to jest, *detective*.' He says, barely staying civil. 'There is someone on the phone for you. Come.")
+        break
+sleep (4)
+print("Charles Fraser leads you inside.")
+sleep(2)
+print("You pick up the phone.")
+sleep(2)
+print(f"'{playertitle} {playername}?' A familiar voice says. 'I trust you are ready to hear about the gruesome details of the case?' The coroner asks.")
+sleep(2)
+print("1) Of course.")
+print("2) I suppose.")
+print("3) Nah, mate.")
+print("4) Must I? I'm but a humble milkman")
+sleep(2)
+while True:
+    milk2 = input()
+    print()
+    if milk2 == "1":
+        sleep(1)
+        print("'I admire your work ethic. Here we go then.'")
+        break
+    if milk2 == "2":
+        sleep(1)
+        print("'Here we go then.' The coroner muses.")
+        break
+    if milk2 == "3":
+        sleep(1)
+        print("'Well too bad.', the coroner says in good humour. 'Here goes anyway.'")
+        break
+    if milk2 == "4":
+        sleep(1)
+        print("'What is it with you and *milkmen?* Anyway, here goes.'")
+        break
+print()
+sleep(2)
+print("'The victim was found hanged, but that wasn't the cause of death. It seems he was lifted up to the tree postmortem. The cause of death seems to be a heavy sedative known as diphenhydramine. It is used in a number of medications. The time of death seems to be between 11 and 1 o'clock last night.")
+sleep(5)
+print()
+print("1) It was murder then.")
+print("2) Ominous.")
+print("3) In my professional opinion as a milkman that seems pretty sus.")
+sleep(2)
+while True:
+    milk3 = input()
+    print()
+    if milk3 == "1":
+        sleep(1)
+        print("'Indeed' He says. 'I sure am glad this is your job and not mine.'")
+        break
+    if milk3 == "2":
+        sleep(1)
+        print("'Yes. But nothing you can't handle I'm sure!'")
+        break
+    if milk3 == "3":
+        sleep(1)
+        print("'I don't disagree.' He says. 'You should probably focus on figuring out the murder though, and not your life as an aspiring milkman.'")
+        break
+sleep(3)
+print()
+print("'Good luck!' He says, hanging up.")
+sleep(4)
+print()
+print("You to the Entrance Hall. The three suspects are waiting for you.")
+print()
+
+
 
 while True:
     print("The suspects are:")
@@ -22,9 +179,9 @@ while True:
     print("3. The Butler, Charles Fraser")
     print("4. I should tour the house")
     sleep(1)
-    talk_to = input(f"Who do you wish to converse with, {ur_name}?\n")
+    talk_to = input(f"Who do you wish to converse with, {playername}?\n")
     if talk_to == "1":
-        print(f"The wife: Yes? What did you need {ur_name}?")
+        print(f"The wife: Yes? What did you need {playername}?")
         sleep(1)
         print("1. How would you describe your relationship with the victim?")
         print("2. Could you describe for me last night's events?")
@@ -78,7 +235,7 @@ while True:
 
 
     if talk_to == "2":
-        print(f"The cook: Yes? {title}?")
+        print(f"The cook: Yes? {playertitle}?")
         sleep(1)
         print("1. How would you describe your relationship with the victim?")
         print("2. Could you describe for me last night's events?")
@@ -126,7 +283,7 @@ while True:
 
 
     if talk_to == "3":
-        print(f"The butler: How can I be of service {title}?")
+        print(f"The butler: How can I be of service {playertitle}?")
         sleep(1)
         print("1. How would you describe your relationship with the victim?")
         print("2. Could you describe for me last night's events?")
