@@ -1,11 +1,11 @@
-ur_name = input("What shall you be referd to as? (ex. Mrs. Fellow)")
+ur_name = input("What shall you be referd to as? (ex. Mrs. Fellow)\n")
 title = "detective"
 print("The murderd victim: Lord Robert Gallowgate")
 print("As you arrive")
 print("1. House tour")
 print("2. Call forensics")
 print("3. I'd rather just go straight to the suspects")
-choise = input("What shall you do?")
+choise = input("What shall you do?\n")
 if choise == "1":
     print("Tour")
 if choise == "2":
@@ -19,7 +19,7 @@ while True:
     print("2. The cook, Marie Fraser")
     print("3. The Butler, Charles Fraser")
     print("4. I know who did it!")
-    talk_to = input(f"Who do you wish to converse with, {ur_name}?")
+    talk_to = input(f"Who do you wish to converse with, {ur_name}?\n")
     if talk_to == "1":
         print(f"The wife: Yes? What did you need {ur_name}?")
         q = input("k")
