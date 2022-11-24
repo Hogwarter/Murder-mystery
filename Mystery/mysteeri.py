@@ -338,7 +338,7 @@ sleep(1)
 print("Do you want to inspect the fireplace (Choice 1) or the room overall (Choice 2)?")
 sleep(3)
 print("Type 1 or 2")
-syoteyksi=input()
+syoteyksi=int(input())
  
 if syoteyksi==1:
     print("You croush down and look inside the fireplace. You see some remains of what seems to be burned letters.")
@@ -355,7 +355,7 @@ sleep(2)
 print("Do you want to inspect the bed (Choice 1) or the nightstand (Choice 2)?")
 sleep(2)
 print("Type 1 or 2")
-syotekaksi=input()
+syotekaksi=int(input())
  
  
 if syotekaksi==1:
@@ -378,12 +378,12 @@ sleep(2)
 print("Do you want to inspect the tree where the lord was found hanging from (Choice 1) or the ground for footsteps in the mud (Choice 2)?")
 sleep(2)
 print("Type 1 or 2")
-syotekak=input()
-if syotekak==1:
+syotekolme=int(input())
+if syotekolme==1:
     print("(The branch of the tree seems too slippery for someone to hang themselves from)")
     sleep(2)
     print("(I did not gain any completely new information but now I can be sure that this case was not a suicide)")
-elif syotekak==2:
+elif syotekolme==2:
     print("After a closer look you notice two people's footsteps that lead to the tree.")
     sleep(2)
     print("(Could there be multiple culplits. Interesting...)")
@@ -405,6 +405,192 @@ elif syotekak==2:
 
 print("Done")
 
+
+
+print("(I feel as though I should ask the suspects some more questions.)")
+sleep(3)
+print("")
+kierros_kerrat = 0
+while True:
+   kierros_kerrat += 1
+   if kierros_kerrat > 3:
+       break
+   valinta = input("Who shall I talk to?\n\n1) Anne Gallowgate\n2) Marie Fraser\n3) Charles Fraser\n")
+   sleep(1)
+ 
+   if valinta == "1":
+       print("")
+       print(f"Which question shall I ask?")
+       sleep(1)
+       print("")
+       kysymys = input("1) How would you describe the relationship between the victim and Marie Fraser?\n2) How would you describe the relationship between the victim and Charles Fraser?\n")
+       sleep(1)
+       if kysymys == "1":
+           print("")
+           print("The wife: Well, Mrs. Fraiser has always been very professional. She knows not to cross the line. And my husband always enjoyed her tarts.")
+           sleep(3)
+       elif kysymys == "2":
+           print("")
+           print("The wife: I never meant to be nosy, but Mr. Fraiser didn't seem to get along with my dear husband. I'm not quite sure why. You should definitely look more into him.")
+           sleep(3)
+ 
+   elif valinta == "2":
+       print("")
+       print(f"Which question shall I ask?")
+       sleep(1)
+       print("")
+       kysymys = input("1) How would you describe the relationship between the victim and Anne Gallowgate?\n2) How would you describe the relationship between the victim and Charles Fraser?\n")
+       if kysymys == "1":
+           print("")
+           print("The cook: They loved each other. Mr. and Mrs. Gallowgate would always do everything together. Could you belive that after all these years they would still make time to drink afternoon tea together in the sitting room every evening.")
+           sleep(3)
+       elif kysymys == "2":
+           print("")
+           print("The cook: They had a great relationship...\n")
+           sleep(3)
+           print("(Something seems off... She knows something she isn't telling me)")
+           sleep(3)
+ 
+   elif valinta == "3":
+       print("")
+       print(f"Which question shall I ask?")
+       sleep(1)
+       print("")
+       kysymys = input("1) How would you describe the relationship between the victim and Anne Gallowgate?\n2) How would you describe the relationship between the victim and Marie Fraser?\n")
+       if kysymys == "1":
+           print("")
+           print("The butler: I'm not quite sure if I should tell you this. Promise to keep this between us. I have overheard Mr. and Mrs. Gallowgate argue before... numerous times. It seemed to me like the love was one-sided.\n")
+           sleep(3)
+           print("(Something isn't adding up)")
+           sleep(3)
+       elif kysymys == "2":
+           print("")
+           print("The butler: Marie had a very professional relationship with Mr. Gallowgate. She is very loyal to me, and has never crossed the line.")
+           sleep(3)
+ 
+   print("")
+ 
+   if kierros_kerrat != 3:
+       print("(I need to get some more information)\n")
+       sleep(3)
+ 
+print("")
+
+
+
+print("(I think I have gone talked to everyone and went to all the rooms.)")
+sleep(2)
+print("Time to make the choice!")
+sleep(1)
+print("What happened?")
+print("1: The butler killed the victim")
+sleep(2)
+print("2: The wife killed the victim")
+sleep(2)
+print("3:The chef killed the victim")
+sleep(2)
+print("4: There were multiple perpetrators")
+sleep(2)
+print("5: None of the people interviewed, are the culprit")
+ 
+print("Type in 1,2,3,4 or 5:")
+sleep(2)
+syyllisensyote=int(input())
+ 
+if syyllisensyote==1:
+   print("You are the culprit, you say as you point at the butler!")
+   sleep(3)
+   print("You put him in handcuffs and soon after the police car you called comes and collects him")
+   sleep(3)
+   print("While he steps in the back of the car, the butler painfully says that he could have never hurt Robert")
+   sleep(3)
+   print("You wonder if you made the right choice, as the car leaves")
+  
+ 
+ 
+if syyllisensyote==2:
+   print("You are the culprit, you say as you point at the wife!")
+   sleep(3)
+   print("You put her in handcuffs and soon after the police car you called comes and collects her")
+   sleep(3)
+   print("While she steps in the back of the car, the wife says that she was not the culprit")
+   sleep(3)
+   print("You wonder if you made the right choice, as the car leaves")
+ 
+if syyllisensyote==3:
+   print("You are the culprit, you say as you point at the chef!")
+   sleep(3)
+   print("You put her in handcuffs and soon after the police car you called comes and collects her")
+   sleep(3)
+   print("While she steps in the back of the car, the chef says that she was not the culprit")
+   sleep(3)
+   print("You wonder if you made the right choice, as the car leaves")
+ 
+if syyllisensyote==4:
+   print("Who are behind the murder?")
+   print("1. The wife and the butler")
+   print("2. The wife and the chef")
+   print("The butler and the chef")
+   print("All three")
+   ketkasyote=int(input())
+   print("Type 1,2,3 or 4:")
+ 
+   if ketkasyote==1:
+       print("You two are the culprits, you say as you point at the butler and wife!")
+       sleep(3)
+       print("You put them in handcuffs and soon after the police car you called comes and collects them")
+       sleep(3)
+       print("You wonder if you made the right choice, as the car leaves")
+       sleep(3)
+       print("Verdict:")
+       sleep(1)
+       print("One or more innocent people will be locked up because of your choice. You have failed")
+ 
+   if ketkasyote==2:
+       print("You two are the culprits, you say as you point at the chef and wife!")
+       sleep(3)
+       print("You see as the chef and wife exchange glances")
+       sleep(2)
+       print("They start running towards the door")
+       sleep(2)
+       print("You were right, and now they are trying to escape")
+       sleep(2)
+       print("Sadly for them you have already called for re-enforcements and the two are caught")
+       sleep(3)
+       print("CONGRATULATIONS!")
+       sleep(1)
+       print("You have won the game!")
+       sleep(1)
+       print("The chef and the the wife found out about the butler's and the victims affair.")
+       sleep(3)
+       print("They decided to murder their unfaithful husbands for money and revenge")
+ 
+  
+   if ketkasyote==3:
+       print("You two are the culprits, you say as you point at the wife and chef!")
+       sleep(3)
+       print("You put them in handcuffs and soon after the police car you called comes and collects them")
+       sleep(3)
+       print("You wonder if you made the right choice, as the car leaves")
+       sleep(3)
+       print("Verdict:")
+       sleep(1)
+       print("One or more innocent people will be locked up because of your choice. You have failed.")
+ 
+ 
+   if ketkasyote==4:
+       print("You all are culprits, you say")
+       sleep(2)
+       print("You put them in handcuffs and soon after the police car you called comes and collects them")
+       sleep(3)
+       print("One or more innocent people will be locked up because of your choice. You have failed.")
+ 
+if syyllisensyote==5:
+   print("You let all the interviewees free and leave the site")
+   sleep(2)
+   print("Verdict:")
+   sleep(1)
+   print("One or more murderers are left to be free. You have failed.")
 
 
 
